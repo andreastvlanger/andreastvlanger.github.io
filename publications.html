@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Andreas Langer's webpage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script> 
+<body>
+	<SCRIPT>
+function Show(x) {
+    document.getElementById(x).style.display='block';
+}
+</SCRIPT>
+<!-- start #header -->
+	<div id="logo">
+	<!-- Beginn #Countdown -->		
+	<!--			<div id="Countdownbar">
+				<DIV id="t_uw" style="background-color: rgb(255, 255, 255);">
+	<DIV id="count_screen">
+		<DIV id="t_title" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;">Es sind noch ...</DIV>
+		<SPAN id="t_wo"></SPAN>
+		<SPAN id="t_tag"></SPAN>
+		<SPAN id="t_std"></SPAN>
+		<SPAN id="t_sek"></SPAN>
+		<SPAN id="t_min"></SPAN>
+		<DIV id="t_subtitle" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;"> </DIV>
+	</DIV>
+	<TABLE id="end_screen_ta" height=100% align="center"><TR><TD id="end_screen_te" style="color: rgb(157, 10, 15); font: 22px Arial, Arial, Helvetica, sans-serif;"> </TD></TR></TABLE> --!>
+	<!--<DIV id="t_lnk"><A href="http://www.touropa.com/tp/gotoHome.do" title="Pauschalreisen bei touropa">touropa Pauschalreisen
+</A></DIV> -->
+<!--</DIV><SCRIPT type="text/javascript">counter=1387982580;template="dunkelrot_glanz";size="s"</SCRIPT><SCRIPT type="text/javascript" src="http://www.touropa.com/tp/countdown/uw.js"></SCRIPT>
+	</div> --!>
+	<!-- End #Countdown -->
+	
+		<h1><a href="#">Andreas Langer </a></h1>
+		<p><em> welcome to my homepage</em></p>
+	</div>
+	<!--<hr />
+	<!-- end #logo -->
+    
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">Home</a></li>
+				<li><div class="dropdown1">
+                    <button class="dropbtn">Research 
+                    <!--<i class="fa fa-caret-down"></i>-->
+                    </button>
+                    <div class="dropdown1-content">
+                        <!-- Creating sub menu Dropdown 
+                        <div class="dropdown2">
+                            <a class="dropBtn2" href="research.html">Research topics</a>
+                            <div class="drop-content2">
+                                <a href="research.html#DD" ONCLICK="Show('SectionNameDD')">Subspace correction for TV</a>
+                                <a href="research.html#FEMfTV" ONCLICK="Show('SectionNameFEM')">FEM for Non-smooth Optimisation</a>
+                                <a href="research.html#PS" ONCLICK="Show('SectionNamePS')">Parameter selection</a>
+                                <a href="research.html#MNR" ONCLICK="Show('SectionNameMNR')">Mixed noise removal</a>
+                            </div>
+                        </div>-->
+                        <a href="research.html">Research topics</a>
+                        <a href="funds.html">Funds</a>
+                        <a href="software.html">Software</a>
+                    </div>
+                    </div></li>
+                <!--<li><a href="research.html">Research</a></li>-->
+				<li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+				<!--<li><a href="activities.html">Activities</a></li>-->
+				<!--<li><a href="software.html">Software</a></li>-->
+				<!--<li><a href="cv.html">CV</a></li>-->
+				<!--<li class="current_page_item"><a href="#">Blog</a></li>
+				<li><a href="photos.html">Photos</a></li>-->
+				<li><a href="teaching.html">Teaching</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!--<div id="search">
+			<form method="get" action="">
+				<fieldset>
+				<input type="text" name="s" id="search-text" size="15" />
+				<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>-->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+<!-- begin #page-->
+	<div id="page">
+		<div id="content">
+		  <div class="post">
+				<h2 class="title"><a>Publications</a></h2>
+				<div class="entry">
+                    
+                        <h2>Submitted preprints to refereed journals</h2>
+                    
+                        <ul>
+                                                    
+                            <li>A. Langer and S. Behnamian, <i>DeepTV: A neural network approach for total variation minimization</i>, arXiv preprint ArXiv:2409.05569, 2024. <a href="https://arxiv.org/abs/2409.05569">[link]</a> <a href="https://github.com/andreastvlanger/DeepTV">[software]</a> </li>
+                            
+                            
+                            
+                            <li>S. Hilb and A. Langer, <i>A General Decomposition Method for a Convex Problem Related to Total Variation Minimization</i>, arXiv preprint ArXiv:2211.00101, 2022. <a href="publications/generalDDfdualTV.pdf">[pdf]</a> 
+                                <a href="https://arxiv.org/abs/2211.00101">[link]</a>
+                                <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/DualTVDD.jl">[software]</a> </li> 
+                             
+                            
+                        </ul>  
+                    
+                        <h2>Book chapter</h2>
+                        <ul>
+                        <li>A. Langer, <i>Domain Decomposition for Non-smooth (in Particular TV) Minimization</i>. In: Chen K., Schönlieb CB., Tai XC., Younces L. (eds) Handbook of Mathematical Models and Algorithms in Computer Vision and Imaging. Springer, Cham, 2021. https://doi.org/10.1007/978-3-030-03009-4_104-1 <a href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-03009-4_104-1.pdf">[pdf]</a></li>
+                        </ul>
+						 <!--<h2>Submitted preprints to refereed journals</h2>
+						 <ul>
+                            <li>A. Langer and F. Gaspoz, <i>Overlapping domain decomposition methods for total variation denoising</i>, accepted by SIAM Journal on Numerical Analysis, 2019, 29 pp. <a href="publications/DDfTV_2preprint.pdf">[pdf]</a> </li> 
+                             
+                        </ul>  
+                            
+                             
+                             <!--<li>M. Hinterm&uuml;ller, A. Langer, C. N. Rautenberg, and T. Wu, <i>Adaptive regularization for reconstruction from subsampled data in non-image domains</i>, submitted to IEEE Transactions on Image Processing, 2015, 8 pp. </li> -->
+                                
+						 				
+						 <!--<p></p>
+						 
+						 
+						 </ul> -->
+				
+						 <h2>Refereed journal papers</h2>
+						 <ul>
+			<li>M. Alk&auml;mper, S. Hilb, and A. Langer, <i>A primal-dual adaptive finite element method for total variation minimization</i>, Advances in Computational Mathematics, Vol. 51, No. 42, 2025. <a href="https://link.springer.com/article/10.1007/s10444-025-10254-8">[link]</a>  
+			<!--<a href="https://arxiv.org/abs/2404.03125">[arxiv]</a>-->
+                                 <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/SemiSmoothNewton.jl">[software]</a></li> 
+                                 
+                             <li>T. Jacumin and A. Langer, <i>An adaptive finite difference method for total variation minimization</i>, Numerical Algorithms (2025) <a href="https://link.springer.com/article/10.1007/s11075-025-02044-6">[link]</a> <a href="https://zenodo.org/records/13629098">[software]</a> </li>
+                        
+                             <li>S. Hilb, A. Langer, and M. Alk&auml;mper, <i>A primal-dual finite element method for scalar and vectorial total variation minimization</i>, Journal of Scientific Computing, Vol. 96, No. 24, 2023. <a href="publications/2023_HilLanAlk.pdf">[pdf]</a>
+                                 <a href="https://link.springer.com/article/10.1007/s10915-023-02209-2">[link]</a> 
+                                 <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/SemiSmoothNewton.jl">[software]</a></li> 
+                             
+                         <li>A. Langer and F. Gaspoz, <i>Overlapping domain decomposition methods for total variation denoising</i>, SIAM Journal on Numerical Analysis, Vol. 57, No. 3, 2019, 1411-1444 <a href="publications/DDfTV_2preprint.pdf">[pdf]</a> <a href="https://epubs.siam.org/doi/abs/10.1137/18M1173782">[link]</a> 
+                         </li> 
+                             
+                         <li>A. Langer, <i>Locally adaptive total variation for removing mixed Gaussian-impulse noise</i>, International Journal of Computer Mathematics, Vol. 96, No. 2, 2019, 298-316 <a href="http://www.tandfonline.com/doi/abs/10.1080/00207160.2018.1438603">[link]</a></li><!--<a href="publications/LATVGIN.pdf">[pdf]</a>-->
+                             
+                         <li>A. Langer, <i>Investigating the influence of box-constraints on the solution of a total variation model via an efficient primal-dual method</i>, J. Imaging, Vol. 4, No. 1, 2018, 12 (34 pp.) <a href="http://www.mdpi.com/2313-433X/4/1/12">[link]</a></li><!--<a href="publications/conL2TV.pdf">[pdf]</a> </li> -->  
+                             
+                         <li>M. Hinterm&uuml;ller, C. N. Rautenberg, T. Wu, and A. Langer, <i>Optimal Selection of the Regularization Function in a Generalized Total Variation Model. Part II: Algorithm, its Analysis and Numerical Tests</i>, Journal of Mathematical Imaging and Vision, 2017, pp. 1-19 
+                             <a href="https://link.springer.com/article/10.1007/s10851-017-0736-2">[link]</a></li>
+                         
+                         <li>A. Langer, <i>Automated parameter selection in the L<sup>1</sup>-L<sup>2</sup>-TV model for removing Gaussian plus impulse noise</i>, Inverse Problems, Vol. 33, No. 7, 2017, 074002 (41 pp.) <a href="publications/L1L2TVm.pdf">[pdf]</a> 
+                             <a href="http://iopscience.iop.org/article/10.1088/1361-6420/33/7/074002">[link]</a></li>
+                            
+                         <li> M. Alk&auml;mper and A. Langer, <i>Using DUNE-ACFem for non-smooth minimization of bounded variation functions</i>, Archive of Numerical Software, Vol. 5, No. 1, 2017, pp. 3-19 <a href="publications/NSMSD.pdf">[pdf]</a></li>
+                                 
+                         
+                         <li>A. Langer, <i>Automated parameter selection for total variation minimization in image restoration</i>, Journal of Mathematical Imaging and Vision, Vol. 57, No. 2, 2017, pp. 239–268 <a href="publications/APS_con.pdf">[pdf]</a>
+                             <a href="https://link.springer.com/article/10.1007%2Fs10851-016-0676-2">[link]</a></li>   
+                         
+                             
+						 <li>M. Hinterm&uuml;ller and A. Langer, <i>Non-overlapping domain
+						 decomposition methods for dual total variation based image denoising
+						 </i>, J. Scientific Computing, Vol. 62, No. 2, 2015 pp. 456-481.
+						 <a href="publications/SFB-Report-2013-014.pdf">[pdf]</a></li>
+                             
+                             
+						 <li>M. Hinterm&uuml;ller and A. Langer, <i>Subspace correction methods 
+						 for a class of non-smooth and non-additive convex variational problems
+						 with mixed L<sup>1</sup>/L<sup>2</sup> data-fidelity in image processing</i>, 
+						 SIAM J. Imaging Sciences, Vol. 6, No. 4, 2013, pp. 2134-2173
+						 <a href="publications/SC_L1L2TV_new.pdf">[pdf]</a></li>
+                             
+						 <li>A. Langer, S. Osher, and C.-B. Sch&ouml;nlieb, <i>Bregmanized domain 
+						 decomposition for image restoration</i>, J. Scientific Computing, Vol. 54, 2013, pp. 549-576
+						 <a href="publications/BregmanizedDDf.pdf">[pdf]</a></li>
+                             
+						 <li>M. Fornasier, Y. Kim, A. Langer, and C.-B. Sch&ouml;nlieb, <i>Wavelet decomposition method for 
+						 L2/TV-image deblurring</i>, SIAM J. Imaging Sciences, Vol. 5, No. 3, 2012, pp. 857-885 
+						 <a href="publications/fklssiam.pdf">[pdf]</a></li>
+						 <li>M. Fornasier, A. Langer, and C.-B. Sch&ouml;nlieb, <i>A 
+						 convergent overlapping domain decomposition method for total 
+						 variation minimization </i>, Numer. Math., Vol. 116, No. 4, 2010, pp. 645-685
+						 <a href="publications/2010_NumMath_ForLanSch.pdf">[pdf]</a><!--</h5></li> -->
+						 <a href="http://homepage.univie.ac.at/carola.schoenlieb/Research_files/tv_dode_numerics.htm">[software]</a></li>
+						 <p></p>
+						 
+						 </ul>
+						 
+						 <h2>Conference papers</h2>
+						 <ul>
+                             
+                             <li>M. Hinterm&uuml;ller, A. Langer, C. N. Rautenberg, and T. Wu, <i>Adaptive regularization for image reconstruction from subsampled data</i>,In Proceedings of the International Conference on Imaging, Vision and Learning Based Optimization and PDEs. ILVOPDE 2016. Pages 3–26, Springer, 2018 <a href="https://link.springer.com/content/pdf/10.1007%2F978-3-319-91274-5_1.pdf">[pdf]</a>
+                                 <!-- WIAS Preprint No. 2379, 2017, 19 pp. <a href="http://www.wias-berlin.de/publications/wias-publ/run.jsp?template=abstract&type=Preprint&year=2017&number=2379">[link]</a>-->
+                            </li>
+                             
+                             <li>G. Langer, A. Langer, B. Buchegger, J. Jacak, T. A. Klar, and T. Berer, 
+						 <i>Frequency domain optical resolution photoacoustic and fluorescence microscopy using a modulated laser diode</i>,
+						  Proc. SPIE 10064, Photons Plus Ultrasound: Imaging and Sensing 2017, 1006426, 2017. <a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=2608799&resultClick=1">[link]</a> 
+				            </li>
+                             
+                        <li>M. Hinterm&uuml;ller and A. Langer, <i>Surrogate functional based
+						 subspace correction methods for image processing</i>, In Domain Decomposition Methods in Science and Engineering XXI, pages 829–837. Springer, 2014.<a href="publications/SFB-Report-2012-024.pdf">[pdf]</a> </li>
+                             
+						 <li>M. Fornasier, A. Langer, and C.-B. Sch&ouml;nlieb, 
+						 <i>Domain decomposition methods for compressed sensing </i>,
+						  Proc. Int. Conf. SampTA09, Marseilles, 2009. <a href="publications/sampta09.pdf">[pdf]</a> or <a href="http://arxiv.org/abs/0902.0124v1"> arXiv:0902.0124v1 </a> 
+							[math.NA]</li>
+						 <p></p>
+						 </ul>
+						 
+						 <h2>Miscellaneous</h2>
+						 <ul>
+                             
+                         <li>A. Langer, <i>Efficient Numerical Methods for Total Variation Minimization</i>, Habilitation, University of Stuttgart, 2020 <a href="publications/Habil2Pub_compressed.pdf">[pdf]</a></li>
+                             
+                             <li>M. Hinterm&uuml;ller and A. Langer, <i>Adaptive Regularization for 
+						 Parseval Frames in Image Processing</i>, SFB-Report No. 2014-014 p. 12, 2014
+						 <a href="publications/SFB-Report-2014-014.pdf">[pdf]</a></li>					 
+						 		
+						 <li>A. Langer, <i> Subspace Correction and Domain Decomposition Methods
+						  for Total Variation Minimization</i>,
+						  Doctoral thesis, Johannes Kepler University of Linz, July 2011. 
+							<a href="publications/PhD_thesis.pdf">[pdf]</a>
+						</li>
+						 <li>A. Langer, <i>	Fliterapproximation in der 
+						 Signalverarbeitung (Approximation of Filters in Signal Processing)</i>,
+						  Master thesis, Johannes Kepler University of Linz, May 31 2006.
+						</li>
+						 <p></p>
+						 </ul>
+			  </div>
+		<!-- <div class="entry">
+					<p></p>
+					<p></p>
+			</div>-->
+				</div>
+		</div><!-- end #content -->
+    
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>For this webpage I have used among other useful things <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>

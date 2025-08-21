@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Andreas Langer's webpage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script> 
+<SCRIPT>
+function ShowAndHide(x) {
+    
+    var x = document.getElementById(x);
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</SCRIPT>
+<!--<script>
+    $(document).ready(function(){
+        $(".funds").click(function(){
+            $(".funds .fa-chevron-down").toggleClass("rtoate180");
+        });
+    });
+    </script>-->
+<body>
+   <SCRIPT>
+function Show(x) {
+    document.getElementById(x).style.display='block';
+}
+</SCRIPT>
+<!-- start #header -->
+	<div id="logo">
+	<!-- Beginn #Countdown -->		
+	<!--			<div id="Countdownbar">
+				<DIV id="t_uw" style="background-color: rgb(255, 255, 255);">
+	<DIV id="count_screen">
+		<DIV id="t_title" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;">Es sind noch ...</DIV>
+		<SPAN id="t_wo"></SPAN>
+		<SPAN id="t_tag"></SPAN>
+		<SPAN id="t_std"></SPAN>
+		<SPAN id="t_sek"></SPAN>
+		<SPAN id="t_min"></SPAN>
+		<DIV id="t_subtitle" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;"> </DIV>
+	</DIV>
+	<TABLE id="end_screen_ta" height=100% align="center"><TR><TD id="end_screen_te" style="color: rgb(157, 10, 15); font: 22px Arial, Arial, Helvetica, sans-serif;"> </TD></TR></TABLE> --!>
+	<!--<DIV id="t_lnk"><A href="http://www.touropa.com/tp/gotoHome.do" title="Pauschalreisen bei touropa">touropa Pauschalreisen
+</A></DIV> -->
+<!--</DIV><SCRIPT type="text/javascript">counter=1387982580;template="dunkelrot_glanz";size="s"</SCRIPT><SCRIPT type="text/javascript" src="http://www.touropa.com/tp/countdown/uw.js"></SCRIPT>
+	</div> --!>
+	<!-- End #Countdown -->
+	
+		<h1><a href="#">Andreas Langer </a></h1>
+		<p><em> welcome to my homepage</em></p>
+	</div>
+	<!--<hr />
+	<!-- end #logo -->
+    
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">Home</a></li>
+				<li><div class="dropdown1">
+                    <button class="dropbtn">Research 
+                    <!--<i class="fa fa-caret-down"></i>-->
+                    </button>
+                    <div class="dropdown1-content">
+                        <!-- Creating sub menu Dropdown 
+                        <div class="dropdown2">
+                            <a class="dropBtn2" href="research.html">Research topics</a>
+                            <div class="drop-content2">
+                                <a href="research.html#DD" ONCLICK="Show('SectionNameDD')">Subspace correction for TV</a>
+                                <a href="research.html#FEMfTV" ONCLICK="Show('SectionNameFEM')">FEM for Non-smooth Optimisation</a>
+                                <a href="research.html#PS" ONCLICK="Show('SectionNamePS')">Parameter selection</a>
+                                <a href="research.html#MNR" ONCLICK="Show('SectionNameMNR')">Mixed noise removal</a>
+                            </div>
+                        </div>-->
+                        <a href="research.html">Research topics</a>
+                        <a href="funds.html">Funds</a>
+                        <a href="software.html">Software</a>
+                    </div>
+                    </div></li>
+                <!--<li><a href="research.html">Research</a></li>-->
+				<li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+				<!--<li><a href="activities.html">Activities</a></li>-->
+				<!--<li><a href="software.html">Software</a></li>-->
+				<!--<li><a href="cv.html">CV</a></li>-->
+				<!--<li class="current_page_item"><a href="#">Blog</a></li>
+				<li><a href="photos.html">Photos</a></li>-->
+				<li><a href="teaching.html">Teaching</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!--<div id="search">
+			<form method="get" action="">
+				<fieldset>
+				<input type="text" name="s" id="search-text" size="15" />
+				<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>-->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+    
+<!-- begin #page-->
+	<div id="page">
+		<div id="content">
+		  <div class="post">
+				<h2 class="title"><a>Third-Party Funds</a></h2>
+				<div class="entry">
+                    <!--<BUTTON ONCLICK="ShowAndHide('SectionName')">Click me</BUTTON>
+                    <DIV ID="SectionName" STYLE="display:none">Text to be shown and hidden</DIV>-->
+					 <p></p>
+                    <h3 class="funds" ONCLICK="ShowAndHide('SectionName1')" href="#">Locally adaptive methods for free discontinuity problems <!--<i class="fa fa-chevron-down" style="font-size:14px"></i>--></h3>
+                    <DIV ID="SectionName1" STYLE="display:none">
+                    Funder: The Crafoord Foundation<br>
+                    Periode: Oct. 2022 - Sept. 2024<br>
+                    PI: Andreas Langer
+                    <p></p>
+                    In many modern applications, like medical image reconstruction, the solution of interest is described by a discontinuous function. Unfortunately, it is a priori not known where the discontinuities are located and their location has to be determined numerically. In fact, computing discontinuities wrongly or inaccurately could be either fatal (as in obstacle and tumor detection) or scientifically costly. In order to preserve edges and discontinuities in image processing, the minimization of a functional consisting of a the total variation term is common and widely used. Typical applications, where such an optimization problem is solved are for example: image denoising, image deblurring, and reconstruction of partial Fourier-data (magnetic resonance imaging). <br>
+                    
+                    In this project we solve the constituted problems by constructing methods which automatically adjust to the discontinuities of the underlying (observed) data. The adaptive adjustment of the derived methods occur on two sides, on the regularization side, where the regularization is locally adjusted, and on the discretization side, where an optimal discretization is learned. This leads to methods, which adaptively (in an iterative manner) reduce the reconstruction error, allowing to obtain the discontinuities more accurately and hence yield qualitatively better reconstructions than state-of-the-art methods, while keeping the computational complexity of the underlying problem on a manageable size. Additionally to these attributes the derived methods will possess further desirable properties, as robustness with respect to the given data and they allow for different discretization techniques. 
+                        <p><br></p>
+                        <p></p>
+                    </DIV>
+                    <h3 class="funds" ONCLICK="ShowAndHide('SectionName2')" href="#">EXC 2075, PN5-2A: Data-driven optimisation algorithms for local dynamic model adaptivity <!--&nbsp; &nbsp; <i class="fa fa-chevron-down" style="font-size:14px"></i>--></h3>
+                    <DIV ID="SectionName2" STYLE="display:none">
+                    Funder: German Research Foundation (Deutsche Forschungsgemeinschaft, DFG)<br>
+                    Periode: Dec. 2019 – May 2023<br>
+                    PI: Andreas Langer
+                    <p></p>
+                    We develop an optimization framework that will on-the-fly identify parameters in an adaptive computational model for gas storage. These parameters might be physical unknown values of interest such as the permeability, or indicate which type of physical model is locally used (multi-modelling). Thereby the choice of the local model is based on a model hierarchy. Our optimization framework formulates a problem, where the objective function contains local criteria and the fulfillment of the model equation may appear as constraint.  
+                        <p><br></p>
+                        <p></p>
+                    </DIV>
+                    <h3 class="funds" ONCLICK="ShowAndHide('SectionName3')" href="#">Automatic detection of moving objects in high-resolution image sequences using novel decomposition methods <!--&nbsp; &nbsp; <i class="fa fa-chevron-down" style="font-size:14px"></i>--></h3>
+                    <DIV ID="SectionName3" STYLE="display:none">
+                    Funder: Ministerium für Wissenschaft, Forschung und Kunst des Landes Baden-Württemberg and the University of Stuttgart<br>
+                    Periode: April 2018 – March 2021<br>
+                    PI: Andreas Langer
+                    <p></p>
+                    The determination of motion fields plays a fundamental role in the field of self-driving cars. There it is of highest interest to detect automatically threats by moving objects so that a vehicle can react to them independently (artificial intelligence). Thereby the environment is recorded in detail as a sequence of images. The apparent movement (called optical flow), i.e. the change in color intensities in the pixels, can then be determined from this sequence of images. Since high-resolution image sequences lead to large amounts of data, known methods can only calculate the optical flow from such image sequences very slowly. In order to be able to carry out these calculations in real time, as is necessary for autonomous driving, new efficient solvers are required. In this project, we will construct such efficient methods for calculating the optical flow using domain decomposition methods (DDMs). It has been shown several times that DDMs are one of the most successful methods to design efficient numerical solvers for large problems. The reason for this is that they allow the computational effort to be decomposed and a sequence of smaller problems to be solved.<br>
+                    To keep the computational effort as low as possible, we also propose a finite element discretisation of the problem. This allows us to perform an adaptive discretization of the problem, which further reduces the computational effort. In order to perform an adaptive refinement, we will derive a posteriori error estimates.
+                    
+                        <p><br></p>
+                        <p></p>
+                    </DIV>
+                    <!--
+                    <table>
+                    <tr>
+				        <td id="gr" width=5> </td>
+                        <td id="gr" width=180 valign="top"> Oct. 2022 - Sept. 2024 </td> 
+                        <td class="funds"> The Crafoord Foundation
+                        <br>
+                        <b>Project title:</b> Lokalt adaptiva metoder för fria diskontinuitetsproblem (engl. Locally adaptive methods for free discontinuity problems)
+                            <br>
+                        <b>PI:</b> Andreas Langer 
+                        </td>
+				    </tr>
+                      
+                    <tr>
+				        <td id="gr" width=5> </td>
+                        <td id="gr" width=150 valign="top"> Dec. 2019 – June 2023 </td> 
+                        <td class="funds"> German Research Foundation (Deutsche Forschungsgemeinschaft, DFG) under Germany’s Excellence Strategy – EXC 2075 – 390740016 
+                        <br>
+                        <b>Project title:</b> <i>Data-driven optimisation algorithms for local dynamic model adaptivity </i> <br>
+                        <b>PIs:</b> Andreas Langer and Bernd Flemisch
+                        </td>
+				    </tr>
+                        
+                    <tr>
+				        <td id="gr" width=5> </td>
+                        <td id="gr" width=150 valign="top"> April 2018 – March 2021 </td> 
+                        <td class="funds"> RISC – Research Seed Capital (Ministerium für Wissenschaft, Forschung und Kunst des Landes Baden-Württemberg and the University of Stuttgart) 
+                        <br>
+                            <b>Project title:</b> <i>Automatische Erkennung von bewegten Objekten in hochauflösenden Bildsequenzen mittels neuer Gebietszerlegungsverfahrens</i>
+                        <br>
+                        <b>PI:</b> Andreas Langer</td>
+				    </tr>
+                        
+                    </table>
+                -->
+			  </div>
+		<!-- <div class="entry">
+					<p></p>
+					<p></p>
+			</div>-->
+				</div>
+		</div><!-- end #content -->
+	<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>For this webpage I have used among other useful things <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>

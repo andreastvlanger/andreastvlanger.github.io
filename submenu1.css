@@ -1,0 +1,60 @@
+
+
+/* CSS not necessary for menu to function, just for aesthetics*/
+        #menu{
+          list-style:none;
+        padding:0;
+        margin:0;
+          li {
+            display:block;
+            border-right:1px solid #fff;
+            background:#E7E7E7;
+            color:#3B3B3B;
+            text-decoration:none;
+            padding:0 10px;
+            float:left;
+          padding-left:0;
+          position:relative;
+          line-height: 4.5em;
+          width: 10em;
+          text-align: center;
+            &:hover{
+              background-color: #3d6fc3;
+              background-image: -webkit-linear-gradient(left,#4577cb,#3264b6); 
+              background-image: -o-linear-gradient(left,#4577cb,#3264b6);
+              background-image: -moz-linear-gradient(left,#4577cb,#3264b6);
+              background-image: -ms-linear-gradient(left,#4577cb,#3264b6);
+              background-image: linear-gradient(left,#4577cb,#3264b6);
+              color:#fff;
+            }
+            ul {
+              position:absolute;
+            }
+            a{
+              color: #3B3B3B;
+              text-decoration:none;
+              &:hover {
+                color:#fff;
+              }
+            }
+          }
+          ul {
+            border-top:1px solid #fff;
+            list-style:none;
+          padding:0;
+          margin:0;
+            li {
+              ul {
+                margin-top: -73px;
+                margin-left: 170px;
+              }
+            }
+          }
+          #drop-down{
+            display:none;
+          }
+        }
+
+View Compiled
+
+

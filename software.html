@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Andreas Langer's webpage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>  
+<body>
+    <SCRIPT>
+function Show(x) {
+    document.getElementById(x).style.display='block';
+}
+</SCRIPT>
+<!-- start #header -->
+	<div id="logo">
+	<!-- Beginn #Countdown -->		
+	<!--			<div id="Countdownbar">
+				<DIV id="t_uw" style="background-color: rgb(255, 255, 255);">
+	<DIV id="count_screen">
+		<DIV id="t_title" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;">Es sind noch ...</DIV>
+		<SPAN id="t_wo"></SPAN>
+		<SPAN id="t_tag"></SPAN>
+		<SPAN id="t_std"></SPAN>
+		<SPAN id="t_sek"></SPAN>
+		<SPAN id="t_min"></SPAN>
+		<DIV id="t_subtitle" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;"> </DIV>
+	</DIV>
+	<TABLE id="end_screen_ta" height=100% align="center"><TR><TD id="end_screen_te" style="color: rgb(157, 10, 15); font: 22px Arial, Arial, Helvetica, sans-serif;"> </TD></TR></TABLE> --!>
+	<!--<DIV id="t_lnk"><A href="http://www.touropa.com/tp/gotoHome.do" title="Pauschalreisen bei touropa">touropa Pauschalreisen
+</A></DIV> -->
+<!--</DIV><SCRIPT type="text/javascript">counter=1387982580;template="dunkelrot_glanz";size="s"</SCRIPT><SCRIPT type="text/javascript" src="http://www.touropa.com/tp/countdown/uw.js"></SCRIPT>
+	</div> --!>
+	<!-- End #Countdown -->
+	
+		<h1><a href="#">Andreas Langer </a></h1>
+		<p><em> welcome to my homepage</em></p>
+	</div>
+	<!--<hr />
+	<!-- end #logo -->
+    
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">Home</a></li>
+				<li><div class="dropdown1">
+                    <button class="dropbtn">Research 
+                    <!--<i class="fa fa-caret-down"></i>-->
+                    </button>
+                    <div class="dropdown1-content">
+                        <!-- Creating sub menu Dropdown 
+                        <div class="dropdown2">
+                            <a class="dropBtn2" href="research.html">Research topics</a>
+                            <div class="drop-content2">
+                                <a href="research.html#DD" ONCLICK="Show('SectionNameDD')">Subspace correction for TV</a>
+                                <a href="research.html#FEMfTV" ONCLICK="Show('SectionNameFEM')">FEM for Non-smooth Optimisation</a>
+                                <a href="research.html#PS" ONCLICK="Show('SectionNamePS')">Parameter selection</a>
+                                <a href="research.html#MNR" ONCLICK="Show('SectionNameMNR')">Mixed noise removal</a>
+                            </div>
+                        </div>-->
+                        <a href="research.html">Research topics</a>
+                        <a href="funds.html">Funds</a>
+                        <a href="software.html">Software</a>
+                    </div>
+                    </div></li>
+                <!--<li><a href="research.html">Research</a></li>-->
+				<li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+				<!--<li><a href="activities.html">Activities</a></li>-->
+				<!--<li><a href="software.html">Software</a></li>-->
+				<!--<li><a href="cv.html">CV</a></li>-->
+				<!--<li class="current_page_item"><a href="#">Blog</a></li>
+				<li><a href="photos.html">Photos</a></li>-->
+				<li><a href="teaching.html">Teaching</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!--<div id="search">
+			<form method="get" action="">
+				<fieldset>
+				<input type="text" name="s" id="search-text" size="15" />
+				<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>-->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+<!-- begin #page-->
+	<div id="page">
+		<div id="content">
+		  <div class="post">
+				<h2 class="title"><a>Software</a></h2>
+				<div class="entry">
+					<!--<p>Overlapping domain decomposition methods for total variation minimization 
+					 <a href="http://homepage.univie.ac.at/carola.schoenlieb/webpage_tvdode/tv_dode_numerics.htm"> Download </a></p>-->
+					 <p></p>
+                    <h3>DeepTV</h3>
+                    <p></p>
+					 <ul>
+                         <li>A Python-package for a neural network approach for total variation minimization can be found <a href="https://github.com/andreastvlanger/DeepTV">here</a>. <br> This code is based on the paper:
+                             <ul style="list-style-type: square;">
+                                <li>A. Langer and S. Behnamian, <i>DeepTV: A neural network approach for total variation minimization</i>, arXiv preprint ArXiv:2409.05569, 2024. <a href="https://arxiv.org/abs/2409.05569">[link]</a> </li> 
+                             </ul>
+                         </li>
+                    </ul>
+                         <p></p>
+                    <h3>Domain Decomposition for Total Variation Minimization</h3>
+                    <p></p>
+					 <ul>
+                         <li>A Julia-package for overlapping domain decomposition methods for a dual total variation problem can be found <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/DualTVDD.jl">here</a>.<br>
+                         This code is based on the paper: 
+                             <ul style="list-style-type: square;">
+                                 <li>
+                             S. Hilb and A. Langer, <i>A General Decomposition Method for a Convex Problem Related to Total Variation Minimization</i>, arXiv preprint ArXiv:2211.00101, 2022. <a href="publications/generalDDfdualTV.pdf">[pdf]</a><a href="https://arxiv.org/abs/2211.00101">[link]</a></li>
+                             </ul>        
+                        </li>
+				        <li> A Matlab-package for overlapping domain decomposition methods for total variation minimization can be found
+                                 <a href="http://www.damtp.cam.ac.uk/user/cbs31/webpage_tvdode/tv_dode_numerics.htm"> here </a>.</li>
+							 <!--<li> A package for Kammerer's algorithm...-->
+					 </ul>
+					<p></p>
+                    <h3>Finite Element Methods for Total Variation Minimization</h3>
+                    <p></p>
+                    <ul>
+                        <li>A Julia-package for a finite element method for scalar and vectorial total variation minimization can be found <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/SemiSmoothNewton.jl">here</a>.<br>
+                         This code is based on the papers: <br> 
+                             <ul style="list-style-type: square;">
+                             <li>M. Alk&auml;mper, S. Hilb, and A. Langer, <i>A primal-dual adaptive finite element method for total variation minimization</i>, arXiv preprint ArXiv:2404.03125, 2024. <a href="publications/SemiSmoothNewton2_preprint.pdf">[pdf]</a><a href="https://arxiv.org/abs/2404.03125">[link]</a><br>
+                              </li>      
+                             <li>S. Hilb, A. Langer, and M. Alk&auml;mper, <i>A primal-dual finite element method for scalar and vectorial total variation minimization</i>, Journal of Scientific Computing, Vol. 96, No. 24, 2023. <a href="publications/2023_HilLanAlk.pdf">[pdf]</a>
+                                 <a href="https://link.springer.com/article/10.1007/s10915-023-02209-2">[link]</a> 
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>Adaptive Finite Difference Method for Total Variation Minimization</h3>
+                    <p></p>
+                    <ul>
+                        <li>A Python-package for an adaptive finite difference method for total variation minimization can be found <a href="https://zenodo.org/records/13629098">here</a>.<br>
+                         This code is based on the papers: <br> 
+                             <ul style="list-style-type: square;">
+                             <li>T. Jacumin and A. Langer, <i>An adaptive finite difference method for total variation minimization</i>, Numerical Algorithms (2025) <a href="https://link.springer.com/article/10.1007/s11075-025-02044-6">[link]</a>
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+			  </div>
+		<!-- <div class="entry">
+					<p></p>
+					<p></p>
+			</div>-->
+				</div>
+		</div><!-- end #content -->
+	<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>For this webpage I have used among other useful things <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+	<!-- end #footer -->
+</body>
+</html>

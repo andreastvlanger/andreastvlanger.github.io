@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Andreas Langer's webpage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />  
+<!--<link rel="stylesheet" href="submenu2.css">-->
+
+</head>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>  
+
+<body>
+     <SCRIPT>
+function Show(x) {
+    document.getElementById(x).style.display='block';
+}
+</SCRIPT>
+<!-- start #header -->
+	<div id="logo">
+	<!-- Beginn #Countdown -->		
+	<!--			<div id="Countdownbar">
+				<DIV id="t_uw" style="background-color: rgb(255, 255, 255);">
+	<DIV id="count_screen">
+		<DIV id="t_title" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;">Es sind noch ...</DIV>
+		<SPAN id="t_wo"></SPAN>
+		<SPAN id="t_tag"></SPAN>
+		<SPAN id="t_std"></SPAN>
+		<SPAN id="t_sek"></SPAN>
+		<SPAN id="t_min"></SPAN>
+		<DIV id="t_subtitle" style="color: rgb(157, 10, 15); font: 12px Arial, Arial, Helvetica, sans-serif;"> </DIV>
+	</DIV>
+	<TABLE id="end_screen_ta" height=100% align="center"><TR><TD id="end_screen_te" style="color: rgb(157, 10, 15); font: 22px Arial, Arial, Helvetica, sans-serif;"> </TD></TR></TABLE> --!>
+	<!--<DIV id="t_lnk"><A href="http://www.touropa.com/tp/gotoHome.do" title="Pauschalreisen bei touropa">touropa Pauschalreisen
+</A></DIV> -->
+<!--</DIV><SCRIPT type="text/javascript">counter=1387982580;template="dunkelrot_glanz";size="s"</SCRIPT><SCRIPT type="text/javascript" src="http://www.touropa.com/tp/countdown/uw.js"></SCRIPT>
+	</div> --!>
+	<!-- End #Countdown -->
+	
+		<h1><a href="#">Andreas Langer </a></h1>
+		<p><em> welcome to my homepage</em></p>
+	</div>
+	<!--<hr />
+	<!-- end #logo -->
+    
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" class="first">Home</a></li>
+				<li><div class="dropdown1">
+                    <button class="dropbtn">Research 
+                    <!--<i class="fa fa-caret-down"></i>-->
+                    </button>
+                    <div class="dropdown1-content">
+                        <!-- Creating sub menu Dropdown 
+                        <div class="dropdown2">
+                            <a class="dropBtn2" href="research.html">Research topics</a>
+                            <div class="drop-content2">
+                                <a href="research.html#DD" ONCLICK="Show('SectionNameDD')">Subspace correction for TV</a>
+                                <a href="research.html#FEMfTV" ONCLICK="Show('SectionNameFEM')">FEM for Non-smooth Optimisation</a>
+                                <a href="research.html#PS" ONCLICK="Show('SectionNamePS')">Parameter selection</a>
+                                <a href="research.html#MNR" ONCLICK="Show('SectionNameMNR')">Mixed noise removal</a>
+                            </div>
+                        </div>-->
+                        <a href="research.html">Research topics</a>
+                        <a href="funds.html">Funds</a>
+                        <a href="software.html">Software</a>
+                    </div>
+                    </div></li>
+                <!--<li><a href="research.html">Research</a></li>-->
+				<li><a href="publications.html">Publications</a></li>
+                <li><a href="cv.html">CV</a></li>
+				<!--<li><a href="activities.html">Activities</a></li>-->
+				<!--<li><a href="software.html">Software</a></li>-->
+				<!--<li><a href="cv.html">CV</a></li>-->
+				<!--<li class="current_page_item"><a href="#">Blog</a></li>
+				<li><a href="photos.html">Photos</a></li>-->
+				<li><a href="teaching.html">Teaching</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!--<div id="search">
+			<form method="get" action="">
+				<fieldset>
+				<input type="text" name="s" id="search-text" size="15" />
+				<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>-->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+<!-- begin #page-->
+	<div id="page">
+		<div id="content">
+		  <div class="postr">
+				<h2 class="title"><a>About me</a></h2>
+				<div class="entry">
+				<!--<img src="photos/ich.jpg" width="150" height="180" align="left">-->
+				<img src="photos/2020_07_10_MA_Portraits_684.jpg" width="150" height="220" align="left">
+				<table>
+				<tr>
+				<td id="gr" width=10> </td><td id="gr" width=100> Name: </td> <td> Andreas Langer </td>
+				</tr>
+				
+				<tr>
+				<td id="gr" width=10><td id="gr" width=100> Position: </td> <td> Senior Lecturer </td> <!--Privatdozent of <a href="http://www.ricam.oeaw.ac.at/people/page/fornasier/">Massimo Fornasier</a> </td>-->
+				</tr>
+                <!--<tr>
+                    <td id="gr" width=10><td id="gr" width=100> Title: </td> <td>Associate Professor</td> 
+                    </tr>
+				-->
+				<tr>
+				<td id="gr" width=10><td valign="top"> Affiliation: </td> <td> <a href="https://www.lunduniversity.lu.se/">
+				Lund University</a>, 
+                    <br> <a href="http://www.maths.lu.se/english/">Centre for Mathematical Sciences</a>,
+                <br> <a href="https://www.lunduniversity.lu.se/lucat/user/3662aac10f03a4fb8b9c1072717508a4"> Applied Mathematics </a>
+                    <!-- <br><a style="color:black"> 
+                    and</a> <br>
+                    <a href="https://www.simtech.uni-stuttgart.de/exc/people/Langer-00006/"> Exzellenzcluster SimTech</a>
+                    -->
+                </td>
+                <!--
+				<td id="gr" width=10><td valign="top"> Affiliation: </td> <td> <a href="http://www.uni-stuttgart.de/home/">
+				Universit&auml;t Stuttgart</a>, <br> <a href="https://www.ians.uni-stuttgart.de/">Institute of Applied Analysis and Numerical Simulation (IANS)</a>,
+                <br> <a href="https://www.ians.uni-stuttgart.de/institute/team/Langer-00005/"> Numerical Mathematics for High Performance Computing</a>
+                    <br><a style="color:black"> and</a>
+                    <a href="https://www.simtech.uni-stuttgart.de/exc/people/Langer-00006/"> Exzellenzcluster SimTech</a>
+                    
+                </td>-->
+				</tr>
+				
+				<tr>
+				<td id="gr" width=10><td valign="top"> Postal:</td> <td> Box 118, 221 00 Lund, Sweden</td>
+				<!-- <td id="gr" width=10><td valign="top"> Address:</td> <td> Pfaffenwaldring 57, 70569 Stuttgart, Germany </td> -->
+				</tr>
+				<tr>
+				<td id="gr" width=10><td id="gr" width=100> Email:</td><td> <a href="mailto:andreas.langer@math.lth.se">link </a> </td> <!-- <td> <a href="http://www.uni-stuttgart.de/cgi-bin/mail.cgi?langer=mathematik.uni-stuttgart.de ">link </a> </td>-->
+				</tr>
+				
+				<tr>
+				<td id="gr" width=10><td id="gr" width=100> Telephone: </td> <td> +46 46 222 9320 </td>
+				</tr>
+				<!--<tr>
+				<td id="gr" width=10><td id="gr" width=100> Fax: </td> <td> +49 (0)711 685 65507 </td>
+				</tr>-->
+				</table>
+				<p></p>
+				<br>
+				<!--<td id="gr" width=10><td id="gr" width=100>Curriculum vitae, <i>February 2021</i> <a href="files/CV_Langer.pdf"> [.pdf] </a></td>-->
+				
+				
+				
+					<!--<p> My name is Andreas Langer and I was born in 
+					<a href="http://www.linz.at/">Linz</a>, Austria. I have finished my 
+					diploma studies in technical mathematics at the 
+					<a href="http://www.linz.at/">Johannes Kepler University</a>, Linz, 
+					Austria in 2006. My diploma thesis called .....,under the supervision 
+					of..., was mainly concerned with the study and analysis of .....My 
+					former supervisor, prof.... also offered me the opportunity to 
+					continue the research in this interesting area for another year at the 
+					institute of....., at the same university, <a href="http://www.linz.at/">
+					Johannes Kepler University</a>, Linz, Austria. Here I had the opportunity 
+					to work with special people, from which I learned a lot of helpful 
+					things in the area of....From February 2008, I started working mainly 
+					on..., under the supervision of 
+					<a href="http://www.ricam.oeaw.ac.at/people/page/fornasier/">Massimo Fornasier</a>, 
+					in the group of Analysis of partial differential equations, at the 
+					<a href="http://www.ricam.oeaw.ac.at/">Johann Radon Institute for 
+					Computational and Applied Mathematics (RICAM).</a> </p> -->
+				</div>
+			</div>
+		
+		  <div class="post">
+				<h2 class="title"><a>NEWS</a></h2> <!--About this site-->
+				<div class="entry">
+		  <li> August 21, 2025: The paper <a href="https://link.springer.com/article/10.1007/s10444-025-10254-8">A primal-dual adaptive finite element method for total variation minimization</a> is published.</li>	
+                    <li> March 19, 2025: The paper <a href="https://link.springer.com/article/10.1007/s11075-025-02044-6">An adaptive finite difference method for total variation minimization</a> is published.</li>
+                    <li> September 09, 2024: A new paper on <a href="https://arxiv.org/abs/2409.05569">DeepTV: A neural network approach for total variation minimization</a>.</li>
+                    <li> May 30, 2023: The paper <a href="https://link.springer.com/article/10.1007/s10915-023-02209-2">A primal-dual finite element method for scalar and vectorial total variation minimization</a> is published.</li>
+                    <li> March 01, 2023: Welcome our new postdoc <a href="https://www.lu.se/lucat/user/566669516d6d74c0f0d28a1ccfac640a">Thomas Jacumin</a>.</li>
+                    <li><!--<img src="images/images_achtung.jpg" width="30" height="25">--> October 13, 2022: <span style="color:red">Open postdoc position</span>. For further details and how to apply, please see <a href="https://lu.varbi.com/en/what:job/jobID:547008/type:job/where:4/apply:1">here</a>. <span style="color:red"> Extended deadline:</span> <b>Nov. 22, 2022.</b></li>
+                    <li>July 18, 2022: Congratulations to Stephan Hilb for successfully defending his doctoral thesis.</li>
+                    <li> May 23, 2022: The project "Locally Adaptive Methods for Free Discontinuity Problems" is funded by the Crafoord Foundation <a href="https://www.crafoord.se/bidrag/beviljade-bidrag/vetenskaplig-forskning/?cn-reloaded=1">[link]</a>.</li>
+                    <li>May 01, 2022: Welcome our new PhD-student Marc Runft.</li>
+              <!--      <li> February 01, 2021: Start of my new position as Senior Lecturer in Applied Mathematics at Lund University, Sweden.</li>
+                    <li> October 01, 2020: Start of my new position as Lecturer in Mathematics at Coventry University, U.K.</li>
+                    <li> December 01, 2019: Position filled within the SimTech project "PN5-2b: Data-Driven Optimisation Algorithms for Local Dynamic Model Adaptivity"</li>
+                    <li> November 28, 2019: <a href="https://www.f08.uni-stuttgart.de/mathematik/aktuelles/news/Antrittsvorlesung-von-Priv.-Doz.-Dr.-Andreas-Langer/">Inaugural lecture</a> at the University of Stuttgart</li>  
+                    <li> June 28, 2019: <a href="https://www.f08.uni-stuttgart.de/mathematik/aktuelles/news/Habilitation-von-Dr.-Andreas-Langer/">Habilitation</a></li>    
+                    <li> June 2019: Open PhD-position within the SimTech project "PN5-2b: Data-Driven Optimisation Algorithms for Local Dynamic Model Adaptivity" <!--<a href="https://www.simtech.uni-stuttgart.de/Announcement"> [link]</a>--> 
+                    <!-- (filled in Dec. 2019)</li>
+                    <li> April 01, 2018: <a href="https://www.ians.uni-stuttgart.de/institute/team/Hilb-00003/">Stephan Hilb</a> starts working within the project "Automatische Erkennung von bewegten Objekten in hochaufl&ouml;senden Bildsequenzen mittels neuer Gebietszerlegungsverfahren"</li>
+                    <li> March 05, 2018: A new paper on <a href="publications/DDfTV_1preprint.pdf"> Overlapping domain decomposition methods for total variation denoising</a> is submitted</li>
+                    <li> December 06, 2017: The project "Automatische Erkennung von bewegten Objekten in hochaufl&ouml;senden Bildsequenzen mittels neuer Gebietszerlegungsverfahren" is funded by the MWK Baden W&uuml;rttemberg</li>
+				<li> Mai 01, 2014: I started my new position at the University of Stuttgart at the  <a href="http://www.mathematik.uni-stuttgart.de/fak8/ians/lehrstuhl/nmh/index.html"> Chair of Numerical Mathematics for High Performance Computing </a>
+				<li> February 10, 2012: I will give a seminar talk at the <b>University of Warwick</b></li>
+				<li> September 08, 2011: <img src="images/images_achtung.jpg" width="18" height="15"> I successfully defended (with distinction) my PhD-thesis "Subspace Correction and Domain Decomposition Methods for Total Variation Minimization"
+				<a href="publications/PhD_thesis.pdf"> [pdf]</a>
+				<li> August 01, 2011: I started my new position at the Karl-Franzens-University Graz in the <a href="http://www.uni-graz.at/imawww/ifb/index.html"> START-project group "Interfaces and Free Boundaries"</a>
+				<li> May 11, 2011: A new paper on a fast domain decomposition method for image restoration using Bregman iteration 
+				<a href="publications/BregmanizedDDf.pdf"> [pdf]</a>
+				<li>On January 28, 2011 I will talk about the "Analysis of the Adaptive Iterative Bregman Algorithm" at the <b>University of Cambridge</b>!</li>-->
+				<!--<li><img src="images/images_achtung.jpg" width="30" height="25">--> 
+				<!--						 January 11, 2011: A new paper on <a href="publications/fklssiam.pdf">
+										 Wavelet decomposition method for L2/TV-image deblurring</a> submitted to SIAM J. Imaging Sciences</li>-->
+				<!--<li><img src="images/images_achtung.jpg" width="30" height="25">--> <!--November 11, 2010: My webpage goes online</li>-->
+					<!--<p>This is <strong>my homepage</strong>, containing my past and current research activity, research interests and work.</p>
+					<p>I hope this site will turn out to be helpful to people working in the same research area, or to people interested in finding more about this research aspect.</p>
+	-->		</div>
+		  </div>
+			
+<!--			<div class="post">
+				<h2 class="title"><a href="#">About my current research</a></h2>
+				<div class="entry">
+					<p>My current research concerns mainly....... I am helped by my supervisor Massimo Fornasier. I am also colaborating with C.... Together we are developing an efficient and optimized framework for... I am also colaborating with prof U.L and his collegues from <a href="http://www.numa.uni-linz.ac.at/ ">Institute of Computational Mathematics</a> (from Johannes Kepler University, Linz) and the group of <a href="http://www.numa.uni-linz.ac.at/ ">Computational Methods for Direct Field Problems</a> (from Johann Radon Institute for Applied and Computational Mathematics), that are closely dealing with the same topics I am interested in. During September 2009 and December 2009, I had the chance to start an important collaboration with prof L.V and prof U., from.., during my research stay at.... In 2008 I also visited... <a href="#">dapibus semper urna</a>. </p>
+			  </div>
+			</div>-->
+		</div><!-- end #content -->  
+			<div id="sidebar">
+			<ul>
+				<li>
+					<h2>My research interests</h2>	
+					<p>- Numerics of partial differential equations; 
+					</p>
+                    <p>- Methods for non-smooth optimization;</p>
+					<p>- Methods for constrained optimization problems;	</p>
+                    <p>- Subspace correction methods; </p> 
+					<p>- Domain decomposition methods; <!--for functionals with a nonsmooth and nonadditive 
+					constraint (e.g., total variation constraint)-->
+					</p>
+                    <p>- Inverse problems;</p>
+                    <p>- Parameter estimation;</p>
+					<p>- Total variation (TV) minimization;</p>
+                    <p>- Discretisation techniques for TV;</p>
+                    <p>- Image restoration and analysis.</p>
+									</li>
+                </ul>
+				<!--<li>
+					<h2>My research work </h2>
+					<ul>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="publications.html">Publications</a></li>
+						<li><a href="activities.html">Activities</a></li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="work.html">Some of my work</a></li>
+						<li><a href="links.html">Useful links</a></li>
+						<li><a href="files/cv.pdf">CV</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>My spare time</h2>
+					<ul>
+						<li><a href="pages.html">My pages</a></li>
+					</ul>
+				</li>
+			</ul>-->
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+	<div id="footer">
+		<p>For this webpage I have used among other useful things <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+	<!-- end #footer -->
+<script>
+    
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6388557; 
+var sc_invisible=1; 
+var sc_security="8988fcfb"; 
+</script>
+
+ <script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/6388557/0/8988fcfb/1/"
+alt="web analytics" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>
