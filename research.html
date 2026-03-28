@@ -167,8 +167,32 @@ function Show(x) {
                         caption-side: bottom;
                     }
                     </style>
+                    
                 
-				<p><br></p>
+				<h3 class="funds" ONCLICK="ShowAndHide('SectionNameMFML')" id="MFML"><b>Mathematical Foundations of Machine Learning for PDEs and Variational Models</b></h3>
+                <DIV ID="SectionNameMFML" STYLE="display:none">
+                    <figure style="text-align: center; margin: 0px 0 8px 10px;">
+                        <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+                            <img src="images/solution_hd_ADPINN_false_100.png" alt="AD-PINN approximation 1" width="250" style="height: auto;">
+                            <img src="images/solution_hd_ADPINN_true.png"
+                                 alt="AD-PINN approximation 2"
+                                 width="250" style="height: auto;">
+                        </div>
+                        <figcaption>
+                            Fig.: Two PINN approximations of the same Poisson problem with similar quantitative accuracy, yet markedly different qualitative behavior.
+                        </figcaption>
+                    </figure>
+                    <div style="text-align: justify">
+                        Modern machine learning methods are increasingly used to solve problems governed by differential equations and variational principles. These approaches are attractive because they combine the flexibility of neural networks with structural information coming from the underlying mathematical model. This makes them promising for a wide range of applications in scientific computing, inverse problems, and image analysis. At the same time, their theoretical understanding remains limited, especially when compared with the well-developed foundations of classical numerical and variational methods. My research aims to provide a rigorous mathematical foundation for these approaches, with a focus on reliability, interpretability, and their connection to established analytical and computational frameworks.
+                        <p></p>
+                        <p style="font-weight: bold">Related publications:</p>
+                        <ul>
+                            <li>A. Langer, <i>The ill-posed foundations of physics-informed neural networks and their finite-difference variants</i>, arXiv preprint arXiv:2601.07017, 2026. <a href="https://arxiv.org/abs/2601.07017">[link]</a> <a href="https://github.com/andreastvlanger/PINN">[software]</a> </li>
+                            <li>A. Langer and S. Behnamian, <i>DeepTV: A neural network approach for total variation minimization</i>, arXiv preprint ArXiv:2409.05569, 2024. <a href="https://arxiv.org/abs/2409.05569">[link]</a> <a href="https://github.com/andreastvlanger/DeepTV">[software]</a> </li>  
+                        </ul> 
+                    </div>
+                <p><br></p>
+                </DIV>    
 				<h3 class="funds" ONCLICK="ShowAndHide('SectionNameDD')" id="DD"><b>Subspace Correction Methods for Total Variation Minimization</b></h3>
                 <DIV ID="SectionNameDD" STYLE="display:none">
 				<p></p>
@@ -189,7 +213,7 @@ function Show(x) {
                 <p></p>
                 <p style="font-weight: bold">Related publications:</p>
                         <!--<div class="entry">-->
-                            
+                        <ul>    
                         <li>A. Langer, M. Runft, T. Rahman, X.-C. Tai, and B. Wu, <i>Functional analysis and parallel domain decomposition for the TV-Stokes model</i>, arXiv preprint arXiv:2602.17494, 2026. <a href="https://arxiv.org/abs/2602.17494">[link]</a> </li>
                         
                         <li>S. Hilb and A. Langer, <i>A general decomposition method for a convex problem related to total variation minimization</i>, The SMAI Journal of computational mathematics, Vol. 11, 2025, pp. 693-726.
@@ -231,7 +255,7 @@ function Show(x) {
 						 <i>Domain decomposition methods for compressed sensing </i>,
 						  Proc. Int. Conf. SampTA09, Marseilles, 2009. <a href="publications/sampta09.pdf">[pdf]</a> or <a href="http://arxiv.org/abs/0902.0124v1"> arXiv:0902.0124v1 </a> 
 							[math.NA]</li>
-                        
+                        </ul>
                         <!-- </div> -->
                         
 				<!-- Such methods are relevant and important when one has to solve extremely 
@@ -314,16 +338,18 @@ function Show(x) {
                     </div>
                     <p></p>
                 <p style="font-weight: bold">Related publications:</p>
-                <li>M. Alk&auml;mper, S. Hilb, and A. Langer, <i>A primal-dual adaptive finite element method for total variation minimization</i>, Advances in Computational Mathematics, Vol. 51, No. 42, 2025. <a href="https://link.springer.com/article/10.1007/s10444-025-10254-8">[link]</a> 
-                                 <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/SemiSmoothNewton.jl">[software]</a></li> 
-                    <li>T. Jacumin and A. Langer, <i>An adaptive finite difference method for total variation minimization</i>, Numerical Algorithms (2025) <a href="https://link.springer.com/article/10.1007/s11075-025-02044-6">[link]</a> <a href="https://zenodo.org/records/13629098">[software]</a> </li>
-                    <li>A. Langer and S. Behnamian, <i>DeepTV: A neural network approach for total variation minimization</i>, arXiv preprint ArXiv:2409.05569, 2024. <a href="https://arxiv.org/abs/2409.05569">[link]</a> <a href="https://github.com/andreastvlanger/DeepTV">[software]</a> </li>    
-                    
-                    <li>S. Hilb, A. Langer, and M. Alk&auml;mper, <i>A primal-dual finite element method for scalar and vectorial total variation minimization</i>, Journal of Scientific Computing, Vol. 96, No. 24, 2023. <a href="publications/2023_HilLanAlk.pdf">[pdf]</a>
-                    <a href="https://link.springer.com/article/10.1007/s10915-023-02209-2">[link]</a> 
-                    <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/SemiSmoothNewton.jl">[software]</a></li> 
-                    
-                    <li> M. Alk&auml;mper and A. Langer, <i>Using DUNE-ACFem for non-smooth minimization of bounded variation functions</i>, Archive of Numerical Software, Vol. 5, No. 1, 2017, pp. 3-19 <a href="publications/NSMSD.pdf">[pdf]</a></li>
+                        <ul>
+                        <li>M. Alk&auml;mper, S. Hilb, and A. Langer, <i>A primal-dual adaptive finite element method for total variation minimization</i>, Advances in Computational Mathematics, Vol. 51, No. 42, 2025. <a href="https://link.springer.com/article/10.1007/s10444-025-10254-8">[link]</a> 
+                                         <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/SemiSmoothNewton.jl">[software]</a></li> 
+                            <li>T. Jacumin and A. Langer, <i>An adaptive finite difference method for total variation minimization</i>, Numerical Algorithms (2025) <a href="https://link.springer.com/article/10.1007/s11075-025-02044-6">[link]</a> <a href="https://zenodo.org/records/13629098">[software]</a> </li>
+                            <li>A. Langer and S. Behnamian, <i>DeepTV: A neural network approach for total variation minimization</i>, arXiv preprint ArXiv:2409.05569, 2024. <a href="https://arxiv.org/abs/2409.05569">[link]</a> <a href="https://github.com/andreastvlanger/DeepTV">[software]</a> </li>    
+
+                            <li>S. Hilb, A. Langer, and M. Alk&auml;mper, <i>A primal-dual finite element method for scalar and vectorial total variation minimization</i>, Journal of Scientific Computing, Vol. 96, No. 24, 2023. <a href="publications/2023_HilLanAlk.pdf">[pdf]</a>
+                            <a href="https://link.springer.com/article/10.1007/s10915-023-02209-2">[link]</a> 
+                            <a href="https://gitlab.mathematik.uni-stuttgart.de/stephan.hilb/SemiSmoothNewton.jl">[software]</a></li> 
+
+                            <li> M. Alk&auml;mper and A. Langer, <i>Using DUNE-ACFem for non-smooth minimization of bounded variation functions</i>, Archive of Numerical Software, Vol. 5, No. 1, 2017, pp. 3-19 <a href="publications/NSMSD.pdf">[pdf]</a></li>
+                        </ul>
                     <!--</p> -->
                     <p><br></p> 
                     </DIV>
@@ -350,7 +376,7 @@ function Show(x) {
                     </div>
                      <p></p>
                 <p style="font-weight: bold">Related publications:</p>
-                   
+                   <ul>
                         <li>A. Langer, <i>Locally adaptive total variation for removing mixed Gaussian-impulse noise</i>, International Journal of Computer Mathematics, Vol. 96, No. 2, 2019, 298-316 <a href="http://www.tandfonline.com/doi/abs/10.1080/00207160.2018.1438603">[link]</a></li><!--<a href="publications/LATVGIN.pdf">[pdf]</a>-->
                              
                          <li>A. Langer, <i>Investigating the influence of box-constraints on the solution of a total variation model via an efficient primal-dual method</i>, J. Imaging, Vol. 4, No. 1, 2018, 12 (34 pp.) <a href="http://www.mdpi.com/2313-433X/4/1/12">[link]</a></li><!--<a href="publications/conL2TV.pdf">[pdf]</a> </li> -->  
@@ -368,7 +394,7 @@ function Show(x) {
                              <a href="https://link.springer.com/article/10.1007%2Fs10851-016-0676-2">[link]</a></li>
                     
                     
-                    
+                        </ul>
                 <p><br></p>
                     </DIV>
                     <h3 class="funds" ONCLICK="ShowAndHide('SectionNameMNR')" id="MNR"><b>Mixed Noise Removal</b></h3>
@@ -380,6 +406,7 @@ function Show(x) {
                     
                 <p></p>
                 <p style="font-weight: bold">Related publications:</p>
+                        <ul>
                 <li>A. Langer, <i>Locally adaptive total variation for removing mixed Gaussian-impulse noise</i>, International Journal of Computer Mathematics, Vol. 96, No. 2, 2019, 298-316 <a href="http://www.tandfonline.com/doi/abs/10.1080/00207160.2018.1438603">[link]</a></li>
                 <li>A. Langer, <i>Automated parameter selection in the L<sup>1</sup>-L<sup>2</sup>-TV model for removing Gaussian plus impulse noise</i>, Inverse Problems, Vol. 33, No. 7, 2017, 074002 (41 pp.) <a href="publications/L1L2TVm.pdf">[pdf]</a> 
                              <a href="http://iopscience.iop.org/article/10.1088/1361-6420/33/7/074002">[link]</a></li>
@@ -388,7 +415,7 @@ function Show(x) {
 						 with mixed L<sup>1</sup>/L<sup>2</sup> data-fidelity in image processing</i>, 
 						 SIAM J. Imaging Sciences, Vol 6, No 4, 2013, pp. 2134-2173
 						 <a href="publications/SC_L1L2TV_new.pdf">[pdf]</a></li>    
-                    
+                        </ul>
                     <p><br></p>
 					<!--<h3>Constrained Optimization Problems</h3>
 					<p></p>
